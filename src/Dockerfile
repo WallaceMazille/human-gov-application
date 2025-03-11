@@ -7,6 +7,7 @@ WORKDIR /app
 # Copie os requisitos e instale as dependências
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
+CMD ["export", "PATH=$HOME/.local/bin:$PATH"]
 
 # Copie a aplicação Flask
 COPY . /app
